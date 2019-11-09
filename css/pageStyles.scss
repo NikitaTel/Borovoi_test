@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+$titlemini:16px;
+$h1:18px;
+$fontSize:14px;
+$defaultSize:12px;
+
+*{
+  line-height: 0.2;
+
+  padding: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+
+  #page {
+
+    overflow: auto !important;
+    height: auto !important;
+    .content-full{
+      width:90% !important;
+      .img{
+        height:200px !important;
+      }
+    }
+    .tickets {
+      grid-template-areas: "ticket" !important;
+      grid-row-gap: 10px !important;
+      width: 100% !important;
+
+      .ticket {
+        width: calc(100% - 40px) !important;
+      }
+    }
+
+    .menu {
+      grid-template-areas: "item-menu " !important;
+
+      grid-row-gap: 20px !important;
+
+      .item-menu {
+
+        width: 100% !important;
+      }
+    }
+  }
+}
+@media screen and (min-width:576px) and (max-width:767px){
+ #content{
+   width:90%;
+   .menu{
+      grid-column-gap: 3% !important;
+
+     .item-menu{
+       width:100% !important;
+       .descr{
+         line-height: 1 !important;
+       }
+     }
+   }
+
+ }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    #content{
+      width:90% !important;
+      .menu .item-menu{
+
+        width:100% !important;
+
+      }
+
+    }
+
+}
+#page{
+
+  font-family: 'Raleway', sans-serif;
+  font-size: $defaultSize;
+
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  #content{
+    padding-top:20px;
+
+    display: flex;
+    flex-direction: column;
+    .title{
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      .welcome{
+        padding-bottom: 10px;
+      }
+      .tickets{
+        display: grid;
+        grid-template-areas: "ticket ticket ticket ticket";
+        grid-column-gap: 20px;
+
+        .ticket{
+          padding:20px;
+          display:flex;
+          flex-direction: row;
+          align-content: center;
+          align-items: center;
+          justify-content: center;
+         width:80px;
+        max-height: 50px;
+          background:#EDECEC;
+
+        }
+        .ticket:hover{
+          background: #C9C16D !important;
+          cursor:pointer !important;
+        }
+
+      }
+    }
+    .menu{
+      padding-top: 20px;
+      display: grid;
+      grid-template-areas: "item-menu item-menu item-menu";
+      grid-column-gap: 15px;
+      grid-row-gap: 20px;
+      .item-menu{
+
+        width:250px;
+        .img{
+          width:100%;
+          height:150px;
+        }
+
+        .nameHover:hover{
+          color:#8DB8D7;
+          cursor:pointer;
+        }
+        .nameHover{
+
+
+          .ingredient{
+            font-size:$fontSize;
+          }
+        }
+
+        .ticket-mini{
+          width:50px;
+          padding:10px;
+          max-height: 25px;
+          display:flex;
+          flex-direction: row;
+          align-content: center;
+          align-items: center;
+          justify-content: center;
+          background: lightgray;
+
+        }
+        .descr{
+         word-wrap: normal;
+        }
+      }
+    }
+  }
+}
+.ticket-green{
+  background: #4CB276!important;
+  color:white !important;
+}
+
+.ticket-green-mini{
+  background: #4CB276 !important;
+  color:white !important
+}

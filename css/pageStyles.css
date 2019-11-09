@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+* {
+  line-height: 0.2;
+  padding: 0; }
+
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  #page {
+    overflow: auto !important;
+    height: auto !important; }
+    #page .content-full {
+      width: 90% !important; }
+      #page .content-full .img {
+        height: 200px !important; }
+    #page .tickets {
+      grid-template-areas: "ticket" !important;
+      grid-row-gap: 10px !important;
+      width: 100% !important; }
+      #page .tickets .ticket {
+        width: calc(100% - 40px) !important; }
+    #page .menu {
+      grid-template-areas: "item-menu " !important;
+      grid-row-gap: 20px !important; }
+      #page .menu .item-menu {
+        width: 100% !important; } }
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  #content {
+    width: 90%; }
+    #content .menu {
+      grid-column-gap: 3% !important; }
+      #content .menu .item-menu {
+        width: 100% !important; }
+        #content .menu .item-menu .descr {
+          line-height: 1 !important; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #content {
+    width: 90% !important; }
+    #content .menu .item-menu {
+      width: 100% !important; } }
+#page {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }
+  #page #content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column; }
+    #page #content .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center; }
+      #page #content .title .welcome {
+        padding-bottom: 10px; }
+      #page #content .title .tickets {
+        display: grid;
+        grid-template-areas: "ticket ticket ticket ticket";
+        grid-column-gap: 20px; }
+        #page #content .title .tickets .ticket {
+          padding: 20px;
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          align-items: center;
+          justify-content: center;
+          width: 80px;
+          max-height: 50px;
+          background: #EDECEC; }
+        #page #content .title .tickets .ticket:hover {
+          background: #C9C16D !important;
+          cursor: pointer !important; }
+    #page #content .menu {
+      padding-top: 20px;
+      display: grid;
+      grid-template-areas: "item-menu item-menu item-menu";
+      grid-column-gap: 15px;
+      grid-row-gap: 20px; }
+      #page #content .menu .item-menu {
+        width: 250px; }
+        #page #content .menu .item-menu .img {
+          width: 100%;
+          height: 150px; }
+        #page #content .menu .item-menu .nameHover:hover {
+          color: #8DB8D7;
+          cursor: pointer; }
+        #page #content .menu .item-menu .nameHover .ingredient {
+          font-size: 14px; }
+        #page #content .menu .item-menu .ticket-mini {
+          width: 50px;
+          padding: 10px;
+          max-height: 25px;
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          align-items: center;
+          justify-content: center;
+          background: lightgray; }
+        #page #content .menu .item-menu .descr {
+          word-wrap: normal; }
+
+.ticket-green {
+  background: #4CB276 !important;
+  color: white !important; }
+
+.ticket-green-mini {
+  background: #4CB276 !important;
+  color: white !important; }
+
+/*# sourceMappingURL=pageStyles.css.map */
